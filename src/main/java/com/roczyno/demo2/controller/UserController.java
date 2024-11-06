@@ -28,6 +28,11 @@ public class UserController {
 				"for easy testing, I have included  swagger ui so head on to /swagger-ui/index.html to access the swagger ui for " +
 				"testing without using postman", HttpStatus.OK);
 	}
+	@GetMapping("/")
+	public ResponseEntity<String> hello1(){
+		return new ResponseEntity<>("Hello from CI/CD", HttpStatus.OK);
+	}
+
 	@PostMapping("/user")
 	public ResponseEntity<String> addUser(@RequestBody User user){
 		return ResponseEntity.ok(userService.createUser(user));
