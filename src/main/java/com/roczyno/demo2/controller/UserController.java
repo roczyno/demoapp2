@@ -37,8 +37,6 @@ public class UserController {
 		return new ResponseEntity<>("Hello jacob", HttpStatus.OK);
 	}
 
-
-
 	@GetMapping("/hi")
 	public ResponseEntity<String> hi(){
 		return new ResponseEntity<>("Hi from CI/CD", HttpStatus.OK);
