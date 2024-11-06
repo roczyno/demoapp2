@@ -32,6 +32,10 @@ public class UserController {
 	public ResponseEntity<String> hello1(){
 		return new ResponseEntity<>("Hello from CI/CD", HttpStatus.OK);
 	}
+	@GetMapping("/hi")
+	public ResponseEntity<String> hi(){
+		return new ResponseEntity<>("Hi from CI/CD", HttpStatus.OK);
+	}
 
 	@PostMapping("/user")
 	public ResponseEntity<String> addUser(@RequestBody User user){
